@@ -26,6 +26,16 @@
                                     <rect key="frame" x="20" y="20" width="360" height="58"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQo-RR-3AL">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="1"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="40" y="109" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cfS-z8-h8o"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTC-gy-ztE">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="2"/>
@@ -170,20 +180,10 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="AC"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="40" y="359" width="46" height="30"/>
+                                    <rect key="frame" x="52" y="385" width="46" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="clearTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eOG-C0-gbT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQo-RR-3AL">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="1"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="40" y="109" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="numberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cfS-z8-h8o"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -191,6 +191,7 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="1X7-4z-4xA"/>
+                                <exclude reference="PQo-RR-3AL"/>
                                 <exclude reference="wTC-gy-ztE"/>
                                 <exclude reference="ZT2-6E-zTQ"/>
                                 <exclude reference="S7X-H4-aAF"/>
@@ -206,12 +207,12 @@
                                 <exclude reference="k5S-1o-Btl"/>
                                 <exclude reference="QwC-8X-rT4"/>
                                 <exclude reference="WgK-Bz-KLn"/>
-                                <exclude reference="PQo-RR-3AL"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="1X7-4z-4xA"/>
+                                <include reference="PQo-RR-3AL"/>
                                 <include reference="wTC-gy-ztE"/>
                                 <include reference="ZT2-6E-zTQ"/>
                                 <include reference="S7X-H4-aAF"/>
@@ -227,7 +228,6 @@
                                 <include reference="k5S-1o-Btl"/>
                                 <include reference="QwC-8X-rT4"/>
                                 <include reference="WgK-Bz-KLn"/>
-                                <include reference="PQo-RR-3AL"/>
                             </mask>
                         </variation>
                     </view>
