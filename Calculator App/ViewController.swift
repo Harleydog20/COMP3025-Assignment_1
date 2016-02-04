@@ -21,6 +21,16 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBOutlet weak var calcDisplay: UILabel!
+    @IBAction func numberTapped(sender: AnyObject) {
+    }
 
+    @IBAction func calculationTapped(sender: AnyObject) {
+    }
+    
+    @IBAction func equlasTapped(sender: AnyObject) {
+    }
+    @IBAction func clearTapped(sender: AnyObject) {
+    }
 }
 
