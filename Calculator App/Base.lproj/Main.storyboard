@@ -180,10 +180,20 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="AC"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="52" y="385" width="46" height="30"/>
+                                    <rect key="frame" x="40" y="359" width="46" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="clearTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eOG-C0-gbT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lv8-ME-7QS">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="."/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="163" y="438" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ms3-46-5Mm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -207,6 +217,7 @@
                                 <exclude reference="k5S-1o-Btl"/>
                                 <exclude reference="QwC-8X-rT4"/>
                                 <exclude reference="WgK-Bz-KLn"/>
+                                <exclude reference="Lv8-ME-7QS"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -228,6 +239,7 @@
                                 <include reference="k5S-1o-Btl"/>
                                 <include reference="QwC-8X-rT4"/>
                                 <include reference="WgK-Bz-KLn"/>
+                                <include reference="Lv8-ME-7QS"/>
                             </mask>
                         </variation>
                     </view>

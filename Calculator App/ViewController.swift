@@ -12,8 +12,8 @@ import UIKit
 class ViewController: UIViewController {
     
     var isTypingNumber = false
-    var firstNumber:Int? = 0
-    var secondNumber:Int? = 0
+    var firstNumber:Float? = 0
+    var secondNumber:Float? = 0
     var operation:String? = ""
 
     override func viewDidLoad() {
@@ -41,15 +41,15 @@ class ViewController: UIViewController {
 
     @IBAction func calculationTapped(sender: AnyObject) {
         isTypingNumber = false
-        firstNumber = Int(calcDisplay.text!)
+        firstNumber = Float(calcDisplay.text!)
         operation = sender.currentTitle!
   
     }
     
     @IBAction func equlasTapped(sender: AnyObject) {
         isTypingNumber = false
-        var result = 0
-        secondNumber = Int(calcDisplay.text!)
+        var result:Float = 0
+        secondNumber = Float(calcDisplay.text!)
         
         if operation == "+" {
             result = firstNumber! + secondNumber!
@@ -64,7 +64,11 @@ class ViewController: UIViewController {
         calcDisplay.text = "\(result)"
     }
     @IBAction func clearTapped(sender: AnyObject) {
-
+        isTypingNumber = false
+        firstNumber = 0
+        secondNumber = 0
+        operation = ""
+        calcDisplay.text = "0"
     }
 }
 
