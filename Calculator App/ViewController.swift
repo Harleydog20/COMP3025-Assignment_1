@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Calculator App
 //
-//  Created by student on 2016-02-04.
+//  Created by Robert Thomas on 2016-02-04.
 //  Copyright © 2016 student. All rights reserved.
 //
 
@@ -29,28 +29,33 @@ class ViewController: UIViewController {
     @IBOutlet weak var calcDisplay: UILabel!
     
     @IBAction func numberTapped(sender: AnyObject) {
-        var number:String? = sender.currentTitle!
-        
+        let num:String? = sender.currentTitle! //store the user input as a string
+        //if the user is still entering numbers (i.e. 23) append it to the other number
         if isTypingNumber {
-            calcDisplay.text = calcDisplay.text! + number!
+            calcDisplay.text = calcDisplay.text! + num!
         } else {
-            calcDisplay.text = number
+            //else number is done being input
+            calcDisplay.text = num
             isTypingNumber = true
         }
     }
 
     @IBAction func calculationTapped(sender: AnyObject) {
+        //first number is entered
         isTypingNumber = false
+        //turn the first number into a float
         firstNumber = Float(calcDisplay.text!)
+        //get the operator
         operation = sender.currentTitle!
   
     }
     
-    @IBAction func equlasTapped(sender: AnyObject) {
-        isTypingNumber = false
-        var result:Float = 0
-        secondNumber = Float(calcDisplay.text!)
+    @IBAction func equlasTapped(sender: AnyObject) { //calculate the result
+        isTypingNumber = false //no more inputs
+        var result:Float = 0 //answer
+        secondNumber = Float(calcDisplay.text!) //convert the second num to a float
         
+        //find what operation to use
         if operation == "+" {
             result = firstNumber! + secondNumber!
         } else if operation == "-" {
@@ -60,10 +65,10 @@ class ViewController: UIViewController {
         } else if operation == "/" {
             result = firstNumber! / secondNumber!
         }
-        
+        //display the result
         calcDisplay.text = "\(result)"
     }
-    @IBAction func clearTapped(sender: AnyObject) {
+    @IBAction func clearTapped(sender: AnyObject) { //clear the lable and the vars
         isTypingNumber = false
         firstNumber = 0
         secondNumber = 0
